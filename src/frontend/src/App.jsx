@@ -80,7 +80,7 @@ function App() {
 
     try {
       // Connect to the Phase 3 backend
-      const response = await axios.post('http://127.0.0.1:8000/api/chat', { question: userText });
+      const response = await axios.post('https://dodgeai-f4om.onrender.com/api/chat', { question: userText });
       const { answer, graph_data } = response.data;
       
       setMessages(prev => [...prev, { role: 'ai', content: answer }]);
